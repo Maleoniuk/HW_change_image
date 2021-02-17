@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>//Задание 1
+       // Создайте страницу с тремя кнопками, при нажатии на каждую из кнопок должно меняться изображение,
+       // выводимое на странице.
+        </script>
+        <style type="text/css">
+        body{
+            background-color: pink;
+        }
+
+        </style>
+        <script>
+            window.onload=function(){
+let image=["1.jpg", "2.jpg","3.jpg"];
+let show_Img=document.getElementById("img")
+let change=document.getElementById("change");
+let change_next=document.getElementById("change_next");
+let change_after_next=document.getElementById("change_after_next");
+let info=document.getElementById("info");
+
+
+change.addEventListener("click",function(){
+show_Img.setAttribute("src", image[0]);
+info.innerHTML="image#1";
+})
+change_next.addEventListener("click",function(){
+show_Img.setAttribute("src", image[1]);
+info.innerHTML="image#2";
+})
+change_after_next.addEventListener("click",function(){
+show_Img.setAttribute("src", image[2]);
+info.innerHTML="image#3";
+})
+
+
+}
+        </script>
+</head>
+<body>
+    <img id="img" style="width:300px;">
+ 
+<p id="info">Press any button</p>
+    <button id="change">change Image</button>
+    <button id="change_next">change Image2</button>
+    <button id="change_after_next">change Image3</button>
+</body>
+</html>
